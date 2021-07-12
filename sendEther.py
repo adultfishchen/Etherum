@@ -10,8 +10,7 @@ from web3.types import SignedTx
 
 
 load_dotenv()
-#node_provider = os.environ['NODE_PROVIDER_LOCAL']
-node_provider = "http://127.0.0.1:6201"
+node_provider = os.environ['NODE_PROVIDER_LOCAL']
 w3 = Web3(Web3.HTTPProvider(node_provider))
 
 w3.geth.personal.unlockAccount(w3.eth.accounts[0],os.environ['PASSWORD_1'],10000)
